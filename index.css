@@ -29,10 +29,44 @@ header{
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
-
 }
-.Navigation li:hover{
-    color: rgb(203, 177, 177);
+.Navigation li a{
+    color: white;
+    text-decoration: none;
+}
+.Navigation li a:hover{
+    /* color: rgb(203, 177, 177); */
+    color: rgb(191, 191, 238);
+}
+header svg{
+    display: none;
+    width: 35px;
+    font-weight: bold;
+}
+@media screen and (max-width : 900px){
+    .Navigation li {
+        display: none;
+        background-color: aquamarine;
+    }
+    header svg{
+        display: block;
+    }
+    
+}
+
+.list{
+    text-align: center;
+    font-size: 1.5rem;
+    list-style: none;
+    width: 100%;
+    display: none;
+}
+.list a{
+    text-decoration: none;
+    color: rgb(152, 86, 210);
+}
+.list a:hover{
+    color: red;
 }
 .ImageWrapper{
     padding-bottom: 0px;
@@ -71,7 +105,9 @@ header{
 }
 .Box img{
     border-radius: 0.7rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 .Box:hover{
@@ -105,10 +141,10 @@ header{
 }
 
 .ProfileWrapper{
-    padding: 1rem;
+    /* padding: 0.5rem; */
     width: 250px;
-    margin: 1rem;
-    /* height: 200px; */
+    height: 350px;
+    margin: 0.5rem;
     border-radius: 0.7rem;
     text-align: center;
     box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
@@ -120,5 +156,95 @@ header{
 }
 .ProfileWrapper img{
     width: 100%;
+    object-fit: cover;
+    height: 70%;
+    object-position:center;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
     /* height: 100%; */
+}
+.Blogs{
+    text-align: center;
+}
+.GoogleMap div{
+    height: 350px;
+}
+.GoogleMap iframe{
+    height: 100%;
+    width: 100%;
+}
+.GoogleFormAndMap{
+    text-align: center;
+}
+.GoogleFormAndMap> div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.GoogleForm{
+    width: 30%;
+    /* padding: 0.5rem; */
+}
+.GoogleForm> div{
+    align-items: flex-start;
+    justify-items: flex-start;
+    border: 2px solid rgb(28, 28, 29);
+    border-radius: 0.5rem;
+    
+}
+@media screen and (max-width : 400px) {
+    .GoogleFormAndMap> div{
+        display: inline-block;
+    }
+    .GoogleForm{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .GoogleMap{
+        width: 100%;
+    }
+    .Footer{
+        /* display:inline-block; */
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .Footer svg{
+        margin: 0.3rem;
+    }
+    header h1{
+        font-size: 2rem;
+    }
+    .CompanyIntro h1{
+        font-size: 2rem;
+    }
+}
+.GoogleForm> div div{
+    /* display: flex; */
+    margin: 1rem;
+}
+form div{
+    display: flex;
+    justify-content: space-between;
+}
+.form-control{
+    width: 60%;
+    border: 2px solid rgb(76, 75, 74);
+}
+.Footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to top left, rgb(117, 79, 58), rgb(235, 36, 36));
+    color: white;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+.Footer h5{
+    margin: 0.5rem;
+}
+.Footer h2{
+    margin: 0.5rem;
+}
+.Footer a{
+    color: white;
+    margin: 0.3rem;
 }
